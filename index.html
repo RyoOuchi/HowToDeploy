@@ -3,116 +3,88 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="つくったページを、世界に届けよう。Codexでのランディングページ制作から、GitHub・Netlifyでの公開までを、画像と操作動画で学べる実践ガイド。">
+  <meta name="description" content="How to Deployのドキュメント一覧。公開済みの記事を、タイトル・キーワード・本文から検索できます。">
   <meta name="theme-color" content="#18232b">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:title" content="DEPLOY GUIDE | 作成から公開まで">
-  <meta property="og:description" content="つくったページを、世界に届けよう。画像と操作動画を見ながら、Webサイトの作成から公開までをひとつずつ。">
-  <title>DEPLOY GUIDE | 作成から公開まで</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2318232b'/%3E%3Cpath d='M10 22 22 10M10 10h12v12' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <meta property="og:title" content="How to Deploy | ドキュメント">
+  <meta property="og:description" content="公開した手順やノウハウをまとめたドキュメント集。必要な記事をキーワードから探せます。">
+  <title>How to Deploy | ドキュメント</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2318232b'/%3E%3Cpath d='M10 8h9l4 4v12H10zM18 8v5h5M13 17h7M13 21h7' fill='none' stroke='white' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="LightningPage-release/style.css">
   <link rel="stylesheet" href="entry.css">
+  <script src="entry.js" defer></script>
 </head>
 <body id="top" class="entry-page">
   <a class="skip-link" href="#main">本文へスキップ</a>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="./" aria-label="DEPLOY GUIDE トップへ">
-        <span class="brand-mark" aria-hidden="true">↗</span> DEPLOY GUIDE
+      <a class="brand" href="./" aria-label="How to Deploy ホーム">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg></span>
+        HOW TO DEPLOY
       </a>
       <nav class="header-nav" aria-label="メインナビゲーション">
-        <span class="header-meta">作成から公開まで</span>
-        <a href="#guides">ガイドを見る <span aria-hidden="true">↓</span></a>
+        <a href="#documents">ドキュメント一覧</a>
+        <a class="repository-link" href="https://github.com/RyoOuchi/HowToDeploy">GitHub <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
 
   <main id="main" class="wrap">
-    <section class="entry-hero" aria-labelledby="page-title">
-      <div class="entry-hero-copy">
-        <p class="eyebrow">CREATE IT. SHIP IT.</p>
-        <h1 id="page-title">つくったページを、<br>世界に届けよう。</h1>
-        <p class="hero-description">アイデアを形にして、Webで公開する。<br>画像と操作動画を見ながら、<br class="mobile-break">ひとつずつ進められる実践ガイドです。</p>
-        <a class="primary-link" href="LightningPage-release/index.html">はじめての公開ガイド <span aria-hidden="true">→</span></a>
-        <p class="hero-note">制作から公開まで、全7ステップ。</p>
-      </div>
-
-      <aside class="journey" aria-labelledby="journey-title">
-        <div class="journey-heading">
-          <p id="journey-title">公開までの道のり</p>
-          <span class="journey-label">THE WORKFLOW</span>
+    <section class="library-intro" aria-labelledby="page-title">
+      <p class="eyebrow">DOCUMENTATION</p>
+      <h1 id="page-title">ドキュメントを探す</h1>
+      <p class="hero-description">これまでに公開した手順やノウハウをまとめています。<br>キーワードから、読みたいドキュメントを見つけてください。</p>
+      <form id="document-search" class="document-search" role="search" hidden>
+        <label for="search-input">ドキュメントを検索</label>
+        <div class="search-field">
+          <svg class="search-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+          <input id="search-input" name="q" type="search" placeholder="タイトル・キーワード・本文から検索" autocomplete="off" spellcheck="false" aria-controls="document-list" aria-describedby="search-help">
+          <button id="clear-search" type="button" aria-label="検索をクリア" hidden>×</button>
+          <button class="search-submit" type="submit">検索</button>
         </div>
-        <ol class="journey-list">
-          <li>
-            <a href="LightningPage-release/index.html#create">
-              <span class="journey-number" aria-hidden="true">01</span>
-              <span class="journey-copy"><strong>ページを作る</strong><span>アイデアを、見える形に。</span></span>
-              <span class="journey-tool">Codex</span>
-            </a>
-          </li>
-          <li>
-            <a href="LightningPage-release/index.html#publish-1">
-              <span class="journey-number" aria-hidden="true">02</span>
-              <span class="journey-copy"><strong>ファイルを保存する</strong><span>公開する準備を整える。</span></span>
-              <span class="journey-tool">GitHub</span>
-            </a>
-          </li>
-          <li class="journey-destination">
-            <a href="LightningPage-release/index.html#publish-2">
-              <span class="journey-number" aria-hidden="true">03</span>
-              <span class="journey-copy"><strong>Webで公開する</strong><span>あなたのページを、世界へ。</span></span>
-              <span class="journey-tool">Netlify <span aria-hidden="true">↗</span></span>
-            </a>
-          </li>
-        </ol>
-      </aside>
+        <p id="search-help" class="search-help">スペースで区切ると、複数のキーワードで絞り込めます。</p>
+      </form>
+      <noscript><p class="no-script">検索にはJavaScriptが必要です。下の一覧からすべてのドキュメントを開けます。</p></noscript>
     </section>
 
-    <section id="guides" class="guide-library" aria-labelledby="guides-title">
+    <section id="documents" class="document-library" aria-labelledby="documents-title">
       <div class="section-heading">
-        <div>
-          <p class="eyebrow">GUIDE LIBRARY</p>
-          <h2 id="guides-title">ガイドを選ぶ</h2>
-        </div>
-        <span class="guide-count">01 GUIDE</span>
+        <h2 id="documents-title">公開ドキュメント</h2>
+        <p id="result-count" class="result-count" role="status" aria-live="polite" aria-atomic="true">1 件</p>
       </div>
-
-      <article class="featured-guide" aria-labelledby="lp-title">
-        <div class="guide-overview">
-          <a class="guide-preview" href="LightningPage-release/index.html" aria-label="ランディングページの作り方と公開方法を読む">
-            <img src="LightningPage-release/assets/images/Example_LightningPage.png" alt="大きな見出しと製品写真を配置したランディングページの例" width="1920" height="1093" decoding="async">
-            <span class="preview-caption"><span class="media-type">PREVIEW</span> ランディングページのデザイン例 <span aria-hidden="true">↗</span></span>
-          </a>
-          <div class="guide-summary">
-            <p class="eyebrow">GUIDE 01 / LANDING PAGE</p>
-            <h3 id="lp-title"><a href="LightningPage-release/index.html">ランディングページの<br>作り方と公開方法</a></h3>
-            <p class="guide-description">参考サイトを探し、プロンプトでページを作成。GitHubに保存して、Netlifyで公開するまでの流れを紹介します。</p>
-            <ul class="guide-tags" aria-label="ガイドで使うツール">
-              <li>Codex</li><li>GitHub</li><li>Netlify</li>
-            </ul>
-            <a class="guide-link" href="LightningPage-release/index.html">ガイドを読む <span aria-hidden="true">→</span></a>
+      <div id="document-list">
+        <!-- DOCUMENTS:START -->
+        <article id="document-1" class="document-row" aria-labelledby="document-1-title">
+          <span class="document-number" aria-hidden="true">01</span>
+          <div class="document-content">
+            <h3 id="document-1-title" class="document-heading"><a href="LightningPage-release/index.html">ランディングページの作り方と公開方法</a></h3>
+            <p class="document-description">Codexでランディングページを作り、GitHubとNetlifyで公開するまでの手順を、プロンプト例・画像・操作動画付きで紹介します。</p>
+            <ul class="document-tags" aria-label="キーワード"><li>Codex</li><li>GitHub</li><li>Netlify</li></ul>
+            <p class="search-excerpt" hidden></p>
           </div>
-        </div>
-        <nav class="route guide-route" aria-label="途中からガイドを読む">
-          <a href="LightningPage-release/index.html#create"><span class="route-number">01</span><span class="route-title">LPを作る</span><span class="route-count">3 STEPS <span aria-hidden="true">→</span></span></a>
-          <a href="LightningPage-release/index.html#publish"><span class="route-number">02</span><span class="route-title">LPを公開する</span><span class="route-count">4 STEPS <span aria-hidden="true">→</span></span></a>
-        </nav>
-      </article>
-
-      <aside class="start-note" aria-label="ガイドの読み方">
-        <span class="start-note-mark" aria-hidden="true">i</span>
-        <p><strong>もうページができている方へ</strong>「LPを公開する」から、公開の手順だけを読むこともできます。</p>
-        <a href="LightningPage-release/index.html#publish">公開の手順へ <span aria-hidden="true">→</span></a>
-      </aside>
+          <a class="document-open" href="LightningPage-release/index.html" aria-label="ランディングページの作り方と公開方法を読む"><span aria-hidden="true">→</span></a>
+        </article>
+      <!-- DOCUMENTS:END -->
+      </div>
+      <div id="empty-state" class="empty-state" hidden>
+        <span class="empty-symbol" aria-hidden="true">?</span>
+        <h3>一致するドキュメントが見つかりませんでした</h3>
+        <p>キーワードを短くするか、別の言葉で検索してみてください。</p>
+        <button id="reset-search" type="button">すべてのドキュメントを表示 <span aria-hidden="true">→</span></button>
+      </div>
+      <p class="library-note">各ドキュメントのタイトルをクリックすると、記事を開けます。</p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <p>DEPLOY GUIDE <span class="footer-divider" aria-hidden="true">/</span> 作成から公開まで</p>
+      <p>HOW TO DEPLOY <span class="footer-divider" aria-hidden="true">/</span> ドキュメント</p>
       <a href="#top">ページの先頭へ ↑</a>
     </div>
   </footer>
+  <!-- SEARCH-INDEX:START -->
+  <script id="document-index" type="application/json">[{"id":"document-1","url":"LightningPage-release/index.html","title":"ランディングページの作り方と公開方法","description":"Codexでランディングページを作り、GitHubとNetlifyで公開するまでの手順を、プロンプト例・画像・操作動画付きで紹介します。","tags":["Codex","GitHub","Netlify"],"text":"LANDING PAGE / HOW TO ランディングページの 作り方と公開方法 サービスの第一印象を決める、大切なページ。 Codexで作成して、Netlifyで公開するまでを、 画像と動画でひとつずつ紹介します。 IMAGE ランディングページの例 01 LPを作る 3 STEPS ↓ 02 LPを公開する 4 STEPS ↓ このページの内容 01 LPを作る 1. 新しいチャットを作る 2. 参考のLPを探す 3. プロンプトを書く 02 LPを公開する 1. GitHubにアップロード 2. Netlifyにサインイン 3. プロジェクトを追加 4. デプロイして公開 ページの先頭へ ↑ CHAPTER 01 ランディングページを作る ランディングページは、サービスの第一印象を決める大切なページです。こだわって作りましょう！ 1 新しいチャットを作る プロジェクトのソースコードを参考にしてランディングページを作れるように、Codexで対象のプロジェクト内に新しいチャットを作りましょう。 今回は「Presmith」というサービスのLPを作るので、Presmithプロジェクト内に新しいチャットを作成します。 動画を再生できない場合は、 MP4を開いてください 。 VIDEO Codexで新しいチャットを作る（音声なし） 動画を開く ↗ 2 参考にしたいLPを探す まずは、参考にしたいランディングページを探しましょう。ChatGPTに次のように送ると、デザインや構成の参考になりそうなLPを探してくれます。 ChatGPTに送るプロンプト iPhoneアプリのランディングページ（LP）を作りたいです。 デザインや構成の参考になりそうなLPをいくつか紹介してください。 動画を再生できない場合は、 MP4を開いてください 。 VIDEO ChatGPTで参考のLPを探す（音声なし） 動画を開く ↗ 今回は「Deno」というサービスのLPを参考にします。 3 プロンプトを書いて、LPを作る 以下のプロンプトにある https://deno.com/ を、参考にしたいサイトのURLに置き換えて、Codexに送りましょう。そのままコピー＆ペーストしてもOKです。 LPを作成するプロンプト（全文） このサービス向けに、**そのままデプロイできる、完成度の高いランディングページ（LP）**を制作してください。 デザインの方向性は、以下のサイトを参考にしてください。 https://deno.com/ ただし、参考サイトをそのままコピーするのではなく、以下のようなデザインの考え方や雰囲気を参考にして、このサービス独自のデザインにしてください。 * 大胆でインパクトのあるタイポグラフィ * 開発者向けプロダクトらしい洗練されたデザイン * コードやターミナルUIを効果的に使ったビジュアル * シンプルながら遊び心のあるレイアウト * 十分な余白を確保した、見やすい情報設計 * スクロールするにつれてサービスの魅力が自然に伝わる構成 * 必要に応じたアニメーションやインタラクションの活用 * PC・タブレット・スマートフォンのいずれでも美しく表示されるレスポンシブデザイン 技術要件 デプロイをできるだけ簡単にするため、フレームワークや外部UIライブラリは使用せず、HTML・CSS・JavaScriptのみで実装してください。 ファイルは以下の構成にしてください。 * index.html * style.css * script.js React、Vue、Next.js、Tailwind CSSなどは使用しないでください。 完成したファイルを、GitHub Pages、Cloudflare Pages、Netlify、Vercelなどの静的ホスティングサービスにそのままアップロードして公開できる状態にしてください。 デザイン・UX 単に情報を並べた一般的なSaaSのLPではなく、ひと目で印象に残るLPにしてください。 特にファーストビューは重要です。 サービス名・キャッチコピー・CTAに加えて、このサービスで何ができるのかが視覚的に伝わるデモや画像などを配置してください。 また、可能であれば、以下のようなインタラクションも外部ライブラリを使わずにJavaScriptで実装してください。 * スクロールに連動した控えめなアニメーション * ホバーエフェクト * ターミナルやコードのアニメーション * CTAのインタラクション * ナビゲーション操作に応じたスクロール アニメーションは派手にしすぎず、サービスへの理解を助けるために使用してください。 品質 モックアップではなく、実際に公開することを前提としたLPを制作してください。 そのため、 * セマンティックHTML * SEOを意識したmetaタグ * OGPの基本設定 * アクセシビリティ * レスポンシブ対応 * ホバー時・フォーカス時の適切な表示 * 高速な表示 * JavaScriptが無効でも主要な情報が読める構造 * prefers-reduced-motionへの対応 なども考慮してください。 最終的に、「テンプレート感のあるLP」ではなく、このサービス専用のデザインで、視覚的なインパクトがあり、開発者が見てワクワクするLPに仕上げてください。 動画を再生できない場合は、 MP4を開いてください 。 VIDEO プロンプトから生成したLPを確認する（音声なし） 動画を開く ↗ こちらが、このプロンプトで生成したLPです。生成したLPを確認して、必要に応じて微調整しましょう。 サービスの魅力が伝わるページに LPはサービスの第一印象を決めるページです。わかりやすく、見やすく整えましょう。 CHAPTER 02 ランディングページを公開する LPを無料で公開する方法には、GitHub PagesやNetlifyなど、いくつかの選択肢があります。今回は、Netlifyでデプロイして公開する方法を紹介します。 Netlifyでは、URLをある程度自由に設定できます。一方、GitHub PagesでURLを自由に設定したい場合は、独自ドメインを取得する必要があります。そのため、今回はNetlifyを使用します。 IMAGE Netlifyのホームページ IMAGE GitHub Pagesのドキュメント 1 作成したLPをGitHubにアップロードする GitHubにログインして、左上にある緑色の「New」ボタンを押しましょう。 IMAGE GitHubで新しいリポジトリを作成する画面 リポジトリには好きな名前を付けてください。公開範囲は「Private（非公開）」でもOKです。 動画を再生できない場合は、 MP4を開いてください 。 VIDEO GitHubでリポジトリを作る（音声なし） 動画を開く ↗ 次に、Codexに作ってもらったファイルをGitHubにアップロードします。以下の3つのファイルが生成されているはずです。 index.html script.js style.css ファイルの場所がわからないときは、Codexに聞いてみてください。画像などを使っている場合は、その素材もフォルダ構成を保ってアップロードします。 「upload an existing file（既存のファイルをアップロード）」を押します。 「choose your files」を押して、Codexに作ってもらったファイルを選択し、アップロードします。 最後に「Commit changes」ボタンを押してコミットします。 動画を再生できない場合は、 MP4を開いてください 。 VIDEO ファイルをアップロードしてコミットする（音声なし） 動画を開く ↗ 2 Netlifyにサインインする GitHubアカウントを使って、Netlifyにサインインしましょう。右上の「Sign Up」ボタンを押してから、「Sign Up With GitHub」を選びます。 動画を再生できない場合は、 MP4を開いてください 。 VIDEO GitHubアカウントでNetlifyにサインインする（音声なし） 動画を開く ↗ 初めてアカウントを作る場合 動画では作成済みのアカウントでログインしています。初めてアカウントを作成する場合は、追加の手続きが必要になることがあります。画面の案内に沿って進めてください。 3 新しいプロジェクトを追加する 右上の「Add new Project」ボタンを押しましょう。次に、「Import a Git repository」の選択肢の先頭にある「GitHub」を選びます。 動画を再生できない場合は、 MP4を開いてください 。 VIDEO Netlifyにプロジェクトを追加する（音声なし） 動画を開く ↗ 4 デプロイして、公開したLPを確認する ステップ1で作成したリポジトリを探して選びます。 「Project name（プロジェクト名）」に、自分のアプリの名前を入力します。 一番下にあるデプロイボタンを押します。動画では「Deploy presmith」と表示されています。 動画を再生できない場合は、 MP4を開いてください 。 VIDEO リポジトリを選んでデプロイする（音声なし） 動画を開く ↗ IMAGE Netlifyのデプロイ完了画面 画像のように緑色で表示されたら、デプロイ完了です。 動画を再生できない場合は、 MP4を開いてください 。 VIDEO 公開したLPを開く（音声なし） 動画を開く ↗ あなたのLPが公開されました！ 緑色の \u003c設定した名前\u003e.netlify.app のリンクを押すと、公開したWebサイトを開けます。"}]</script>
+      <!-- SEARCH-INDEX:END -->
 </body>
 </html>
