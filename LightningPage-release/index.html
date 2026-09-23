@@ -81,7 +81,10 @@
           <section class="step" id="create-2" aria-labelledby="create-2-title">
             <div class="step-heading"><span class="step-number" aria-hidden="true">2</span><h3 id="create-2-title">参考にしたいLPを探す</h3></div>
             <p>まずは、参考にしたいランディングページを探しましょう。ChatGPTに次のように送ると、デザインや構成の参考になりそうなLPを探してくれます。</p>
-            <div class="prompt"><p class="prompt-label">ChatGPTに送るプロンプト</p><pre tabindex="0" aria-label="参考サイトを探すプロンプト"><code>iPhoneアプリのランディングページ（LP）を作りたいです。
+            <div class="prompt">
+              <div class="prompt-header"><p class="prompt-label">ChatGPTに送るプロンプト</p><button class="copy-button" type="button" data-copy-target="reference-prompt" aria-controls="reference-prompt" aria-label="参考サイトを探すプロンプトをすべてコピー" hidden>すべてコピー</button></div>
+              <p class="copy-status" role="status" aria-live="polite"></p>
+              <pre id="reference-prompt" tabindex="0" aria-label="参考サイトを探すプロンプト"><code>iPhoneアプリのランディングページ（LP）を作りたいです。
 デザインや構成の参考になりそうなLPをいくつか紹介してください。</code></pre></div>
             <figure class="media">
               <video controls playsinline preload="none" width="3024" height="1892" poster="assets/posters/SearchForLT.png" aria-label="ChatGPTで参考のLPを探すの操作動画" aria-describedby="caption-SearchForLT">
@@ -97,7 +100,8 @@
             <p>以下のプロンプトにある <a href="https://deno.com/">https://deno.com/</a> を、参考にしたいサイトのURLに置き換えて、Codexに送りましょう。そのままコピー＆ペーストしてもOKです。</p>
             <details class="prompt prompt-large" open>
               <summary>LPを作成するプロンプト（全文）</summary>
-              <pre tabindex="0" aria-label="LP作成用プロンプト。全文を選択してコピーできます"><code>このサービス向けに、**そのままデプロイできる、完成度の高いランディングページ（LP）**を制作してください。
+              <div class="copy-toolbar" hidden><button class="copy-button" type="button" data-copy-target="creation-prompt" aria-controls="creation-prompt" aria-label="LP作成用プロンプトをすべてコピー" hidden>すべてコピー</button><p class="copy-status" role="status" aria-live="polite"></p></div>
+              <pre id="creation-prompt" tabindex="0" aria-label="LP作成用プロンプト。全文を選択してコピーできます"><code>このサービス向けに、**そのままデプロイできる、完成度の高いランディングページ（LP）**を制作してください。
 
 デザインの方向性は、以下のサイトを参考にしてください。
 https://deno.com/
@@ -117,15 +121,24 @@ https://deno.com/
 
 デプロイをできるだけ簡単にするため、フレームワークや外部UIライブラリは使用せず、HTML・CSS・JavaScriptのみで実装してください。
 
-ファイルは以下の構成にしてください。
+LPに必要なファイル・フォルダは、すべてプロジェクトルート直下に site フォルダを新規作成し、その中に配置してください。既存のプロジェクトファイルは変更せず、LPに関する実装は site フォルダ内で完結させてください。
 
-* index.html
-* style.css
-* script.js
+以下の構成にしてください。
+
+project-folder/
+├── ...（既存のプロジェクトファイル）
+└── site/
+    ├── index.html
+    ├── style.css
+    ├── script.js
+    └── Assets/
+        └── ...（LPで使用する画像など）
+
+index.html から参照するCSS、JavaScript、画像などは、すべて site フォルダを基準とした相対パスを使用してください。
 
 React、Vue、Next.js、Tailwind CSSなどは使用しないでください。
 
-完成したファイルを、GitHub Pages、Cloudflare Pages、Netlify、Vercelなどの静的ホスティングサービスにそのままアップロードして公開できる状態にしてください。
+完成した site フォルダをそのままデプロイ対象として、GitHub Pages、Cloudflare Pages、Netlify、Vercelなどの静的ホスティングサービスで公開できる状態にしてください。
 
 デザイン・UX
 
@@ -159,7 +172,7 @@ React、Vue、Next.js、Tailwind CSSなどは使用しないでください。
 * ホバー時・フォーカス時の適切な表示
 * 高速な表示
 * JavaScriptが無効でも主要な情報が読める構造
-* prefers-reduced-motionへの対応
+* prefers-reduced-motion への対応
 
 なども考慮してください。
 
@@ -179,7 +192,7 @@ React、Vue、Next.js、Tailwind CSSなどは使用しないでください。
         <section class="chapter" id="publish" aria-labelledby="publish-title">
           <p class="eyebrow">CHAPTER 02</p>
           <h2 class="chapter-heading" id="publish-title">ランディングページを公開する</h2>
-          <p class="chapter-intro">LPを無料で公開する方法には、GitHub PagesやNetlifyなど、いくつかの選択肢があります。今回は、Netlifyでデプロイして公開する方法を紹介します。</br>Netlifyでは、URLをある程度自由に設定できます。一方、GitHub PagesでURLを自由に設定したい場合は、独自ドメインを取得する必要があります。そのため、今回はNetlifyを使用します。</p>
+          <p class="chapter-intro">LPを無料で公開する方法には、GitHub PagesやNetlifyなど、いくつかの選択肢があります。今回は、Netlifyでデプロイして公開する方法を紹介します。</p>
           <div class="service-gallery">
             <figure class="media">
               <a class="media-link" href="assets/images/Netlify.png" aria-label="Netlifyのホームページを拡大表示"><img src="assets/images/Netlify.png" alt="Netlifyのホームページ" width="1920" height="1092" loading="lazy" decoding="async"></a>
@@ -205,16 +218,16 @@ React、Vue、Next.js、Tailwind CSSなどは使用しないでください。
               </video>
               <figcaption id="caption-CreatingNewRepository"><span class="media-type">VIDEO</span> GitHubでリポジトリを作る（音声なし）<a class="media-download" href="assets/videos/CreatingNewRepository.mp4">動画を開く ↗</a></figcaption>
             </figure>
-            <p>次に、Codexに作ってもらったファイルをGitHubにアップロードします。以下の3つのファイルが生成されているはずです。</p>
-            <div class="file-list" aria-label="アップロードするファイル"><code>index.html</code><code>script.js</code><code>style.css</code></div>
-            <p>ファイルの場所がわからないときは、Codexに聞いてみてください。画像などを使っている場合は、その素材もフォルダ構成を保ってアップロードします。</p>
+            <p>次に、Codexに作ってもらったファイルとフォルダーをGitHubにアップロードします。以下の3つのファイルと、<code>Assets</code> フォルダーが生成されているはずです。</p>
+            <div class="file-list" aria-label="アップロードするファイルとフォルダー"><code>index.html</code><code>script.js</code><code>style.css</code><code>Assets/</code></div>
+            <p>これらは、プロジェクトフォルダー内の <code>site</code> フォルダーにあります。場所がわからないときは、Codexに聞いてみてください。</p>
             <ol class="instructions">
-              <li>「upload an existing file（既存のファイルをアップロード）」を押します。</li>
-              <li>「choose your files」を押して、Codexに作ってもらったファイルを選択し、アップロードします。</li>
-              <li>最後に「Commit changes」ボタンを押してコミットします。</li>
+              <li>「Upload an existing file（既存のファイルをアップロード）」を押します。</li>
+              <li><code>site</code> フォルダー内にあるファイルと <code>Assets</code> フォルダーを、フォルダー構成を保ってアップロードします。</li>
+              <li>最後に、左下の「Commit changes」ボタンを押して、変更をコミットします。</li>
             </ol>
             <figure class="media">
-              <video controls playsinline preload="none" width="3024" height="1720" poster="assets/posters/CommitToGithub.png" aria-label="ファイルをアップロードしてコミットするの操作動画" aria-describedby="caption-CommitToGithub">
+              <video controls playsinline preload="none" width="3024" height="1900" poster="assets/posters/CommitToGithub.png" aria-label="ファイルをアップロードしてコミットするの操作動画" aria-describedby="caption-CommitToGithub">
                 <source src="assets/videos/CommitToGithub.mp4" type="video/mp4">
                 <p>動画を再生できない場合は、<a href="assets/videos/CommitToGithub.mp4">MP4を開いてください</a>。</p>
               </video>
@@ -259,7 +272,7 @@ React、Vue、Next.js、Tailwind CSSなどは使用しないでください。
               <figcaption id="caption-Deploying"><span class="media-type">VIDEO</span> リポジトリを選んでデプロイする（音声なし）<a class="media-download" href="assets/videos/Deploying.mp4">動画を開く ↗</a></figcaption>
             </figure>
             <figure class="media">
-              <a class="media-link" href="assets/images/DeployDashboard.png" aria-label="Netlifyのデプロイ完了画面と公開URLを拡大表示"><img src="assets/images/DeployDashboard.png" alt="Netlifyのデプロイ完了画面と公開URL" width="1920" height="1092" loading="lazy" decoding="async"></a>
+              <a class="media-link" href="assets/images/DeployDashboard.png" aria-label="Netlifyのデプロイ完了画面と公開URLを拡大表示"><img src="assets/images/DeployDashboard.png" alt="Netlifyのデプロイ完了画面と公開URL" width="3024" height="1720" loading="lazy" decoding="async"></a>
               <figcaption><span class="media-type">IMAGE</span> Netlifyのデプロイ完了画面</figcaption>
             </figure>
             <p>画像のように緑色で表示されたら、デプロイ完了です。</p>
@@ -277,5 +290,6 @@ React、Vue、Next.js、Tailwind CSSなどは使用しないでください。
     </div>
   </main>
   <footer class="site-footer"><div class="wrap footer-inner"><p>LP GUIDE · ランディングページの作り方と公開方法</p><a href="#top">ページの先頭へ ↑</a></div></footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
