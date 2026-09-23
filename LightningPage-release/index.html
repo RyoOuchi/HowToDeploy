@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Codexでランディングページを作り、GitHubとNetlifyで公開するまでの手順を、プロンプト例・画像・操作動画付きで紹介します。">
+  <meta name="theme-color" content="#18232b">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="ランディングページの作り方と公開方法">
+  <meta property="og:description" content="Codexで作成して、Netlifyで公開。LP制作の流れを、画像・動画とそのまま使えるプロンプトで紹介します。">
+  <title>ランディングページの作り方と公開方法 | LP GUIDE</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2318232b'/%3E%3Cpath d='M8 8v16h7M19 24V8h4a4 4 0 0 1 0 8h-4' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#guide">本文へスキップ</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="LP GUIDE トップへ"><span class="brand-mark" aria-hidden="true">LP</span> LP GUIDE</a>
+      <span class="header-meta">Codex × GitHub × Netlify</span>
+    </div>
+  </header>
+  <main id="guide" class="wrap">
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">LANDING PAGE / HOW TO</p>
+        <h1 id="page-title">ランディングページの<br>作り方と公開方法</h1>
+        <p class="hero-description">サービスの第一印象を決める、大切なページ。<br>Codexで作成して、Netlifyで公開するまでを、<br>画像と動画でひとつずつ紹介します。</p>
+      </div>
+      <figure class="hero-figure">
+        <a href="assets/images/Example_LightningPage.png" aria-label="ランディングページの例を拡大表示"><img src="assets/images/Example_LightningPage.png" alt="大きな見出しと製品写真を配置したランディングページの例" width="1920" height="1093" fetchpriority="high" decoding="async"></a>
+        <figcaption><span class="media-type">IMAGE</span> ランディングページの例</figcaption>
+      </figure>
+    </section>
+    <nav class="route" aria-label="ガイドの章">
+      <a href="#create"><span class="route-number">01</span><span class="route-title">LPを作る</span><span class="route-count">3 STEPS ↓</span></a>
+      <a href="#publish"><span class="route-number">02</span><span class="route-title">LPを公開する</span><span class="route-count">4 STEPS ↓</span></a>
+    </nav>
+    <div class="content-layout">
+      <nav class="contents" aria-label="目次">
+        <p class="contents-label">このページの内容</p>
+        <div class="contents-columns">
+          <div class="contents-group">
+            <a class="contents-chapter" href="#create">01　LPを作る</a>
+            <ol>
+              <li><a href="#create-1">1. 新しいチャットを作る</a></li>
+              <li><a href="#create-2">2. 参考のLPを探す</a></li>
+              <li><a href="#create-3">3. プロンプトを書く</a></li>
+            </ol>
+          </div>
+          <div class="contents-group">
+            <a class="contents-chapter" href="#publish">02　LPを公開する</a>
+            <ol>
+              <li><a href="#publish-1">1. GitHubにアップロード</a></li>
+              <li><a href="#publish-2">2. Netlifyにサインイン</a></li>
+              <li><a href="#publish-3">3. プロジェクトを追加</a></li>
+              <li><a href="#publish-4">4. デプロイして公開</a></li>
+            </ol>
+          </div>
+        </div>
+        <a class="contents-top" href="#top">ページの先頭へ ↑</a>
+      </nav>
+      <article aria-label="LPの作成・公開ガイド">
+        <section class="chapter" id="create" aria-labelledby="create-title">
+          <p class="eyebrow">CHAPTER 01</p>
+          <h2 class="chapter-heading" id="create-title">ランディングページを作る</h2>
+          <p class="chapter-intro">ランディングページは、サービスの第一印象を決める大切なページです。こだわって作りましょう！</p>
+          <section class="step" id="create-1" aria-labelledby="create-1-title">
+            <div class="step-heading"><span class="step-number" aria-hidden="true">1</span><h3 id="create-1-title">新しいチャットを作る</h3></div>
+            <p>プロジェクトのソースコードを参考にしてランディングページを作れるように、Codexで対象のプロジェクト内に新しいチャットを作りましょう。</p>
+            <p>今回は「Presmith」というサービスのLPを作るので、Presmithプロジェクト内に新しいチャットを作成します。</p>
+            <figure class="media">
+              <video controls playsinline preload="none" width="3024" height="1892" poster="assets/posters/CreatingNewProject.png" aria-label="Codexで新しいチャットを作るの操作動画" aria-describedby="caption-CreatingNewProject">
+                <source src="assets/videos/CreatingNewProject.mp4" type="video/mp4">
+                <p>動画を再生できない場合は、<a href="assets/videos/CreatingNewProject.mp4">MP4を開いてください</a>。</p>
+              </video>
+              <figcaption id="caption-CreatingNewProject"><span class="media-type">VIDEO</span> Codexで新しいチャットを作る（音声なし）<a class="media-download" href="assets/videos/CreatingNewProject.mp4">動画を開く ↗</a></figcaption>
+            </figure>
+          </section>
+          <section class="step" id="create-2" aria-labelledby="create-2-title">
+            <div class="step-heading"><span class="step-number" aria-hidden="true">2</span><h3 id="create-2-title">参考にしたいLPを探す</h3></div>
+            <p>まずは、参考にしたいランディングページを探しましょう。ChatGPTに次のように送ると、デザインや構成の参考になりそうなLPを探してくれます。</p>
+            <div class="prompt"><p class="prompt-label">ChatGPTに送るプロンプト</p><pre tabindex="0" aria-label="参考サイトを探すプロンプト"><code>iPhoneアプリのランディングページ（LP）を作りたいです。
+デザインや構成の参考になりそうなLPをいくつか紹介してください。</code></pre></div>
+            <figure class="media">
+              <video controls playsinline preload="none" width="3024" height="1892" poster="assets/posters/SearchForLT.png" aria-label="ChatGPTで参考のLPを探すの操作動画" aria-describedby="caption-SearchForLT">
+                <source src="assets/videos/SearchForLT.mp4" type="video/mp4">
+                <p>動画を再生できない場合は、<a href="assets/videos/SearchForLT.mp4">MP4を開いてください</a>。</p>
+              </video>
+              <figcaption id="caption-SearchForLT"><span class="media-type">VIDEO</span> ChatGPTで参考のLPを探す（音声なし）<a class="media-download" href="assets/videos/SearchForLT.mp4">動画を開く ↗</a></figcaption>
+            </figure>
+            <p>今回は「Deno」というサービスのLPを参考にします。</p>
+          </section>
+          <section class="step" id="create-3" aria-labelledby="create-3-title">
+            <div class="step-heading"><span class="step-number" aria-hidden="true">3</span><h3 id="create-3-title">プロンプトを書いて、LPを作る</h3></div>
+            <p>以下のプロンプトにある <a href="https://deno.com/">https://deno.com/</a> を、参考にしたいサイトのURLに置き換えて、Codexに送りましょう。そのままコピー＆ペーストしてもOKです。</p>
+            <details class="prompt prompt-large" open>
+              <summary>LPを作成するプロンプト（全文）</summary>
+              <pre tabindex="0" aria-label="LP作成用プロンプト。全文を選択してコピーできます"><code>このサービス向けに、**そのままデプロイできる、完成度の高いランディングページ（LP）**を制作してください。
+
+デザインの方向性は、以下のサイトを参考にしてください。
+https://deno.com/
+
+ただし、参考サイトをそのままコピーするのではなく、以下のようなデザインの考え方や雰囲気を参考にして、このサービス独自のデザインにしてください。
+
+* 大胆でインパクトのあるタイポグラフィ
+* 開発者向けプロダクトらしい洗練されたデザイン
+* コードやターミナルUIを効果的に使ったビジュアル
+* シンプルながら遊び心のあるレイアウト
+* 十分な余白を確保した、見やすい情報設計
+* スクロールするにつれてサービスの魅力が自然に伝わる構成
+* 必要に応じたアニメーションやインタラクションの活用
+* PC・タブレット・スマートフォンのいずれでも美しく表示されるレスポンシブデザイン
+
+技術要件
+
+デプロイをできるだけ簡単にするため、フレームワークや外部UIライブラリは使用せず、HTML・CSS・JavaScriptのみで実装してください。
+
+ファイルは以下の構成にしてください。
+
+* index.html
+* style.css
+* script.js
+
+React、Vue、Next.js、Tailwind CSSなどは使用しないでください。
+
+完成したファイルを、GitHub Pages、Cloudflare Pages、Netlify、Vercelなどの静的ホスティングサービスにそのままアップロードして公開できる状態にしてください。
+
+デザイン・UX
+
+単に情報を並べた一般的なSaaSのLPではなく、ひと目で印象に残るLPにしてください。
+
+特にファーストビューは重要です。
+
+サービス名・キャッチコピー・CTAに加えて、このサービスで何ができるのかが視覚的に伝わるデモや画像などを配置してください。
+
+また、可能であれば、以下のようなインタラクションも外部ライブラリを使わずにJavaScriptで実装してください。
+
+* スクロールに連動した控えめなアニメーション
+* ホバーエフェクト
+* ターミナルやコードのアニメーション
+* CTAのインタラクション
+* ナビゲーション操作に応じたスクロール
+
+アニメーションは派手にしすぎず、サービスへの理解を助けるために使用してください。
+
+品質
+
+モックアップではなく、実際に公開することを前提としたLPを制作してください。
+
+そのため、
+
+* セマンティックHTML
+* SEOを意識したmetaタグ
+* OGPの基本設定
+* アクセシビリティ
+* レスポンシブ対応
+* ホバー時・フォーカス時の適切な表示
+* 高速な表示
+* JavaScriptが無効でも主要な情報が読める構造
+* prefers-reduced-motionへの対応
+
+なども考慮してください。
+
+最終的に、「テンプレート感のあるLP」ではなく、このサービス専用のデザインで、視覚的なインパクトがあり、開発者が見てワクワクするLPに仕上げてください。</code></pre>
+            </details>
+            <figure class="media">
+              <video controls playsinline preload="none" width="3024" height="1892" poster="assets/posters/CreateWithPrompt.png" aria-label="プロンプトから生成したLPを確認するの操作動画" aria-describedby="caption-CreateWithPrompt">
+                <source src="assets/videos/CreateWithPrompt.mp4" type="video/mp4">
+                <p>動画を再生できない場合は、<a href="assets/videos/CreateWithPrompt.mp4">MP4を開いてください</a>。</p>
+              </video>
+              <figcaption id="caption-CreateWithPrompt"><span class="media-type">VIDEO</span> プロンプトから生成したLPを確認する（音声なし）<a class="media-download" href="assets/videos/CreateWithPrompt.mp4">動画を開く ↗</a></figcaption>
+            </figure>
+            <p>こちらが、このプロンプトで生成したLPです。生成したLPを確認して、必要に応じて微調整しましょう。</p>
+            <aside class="note"><strong>サービスの魅力が伝わるページに</strong>LPはサービスの第一印象を決めるページです。わかりやすく、見やすく整えましょう。</aside>
+          </section>
+        </section>
+        <section class="chapter" id="publish" aria-labelledby="publish-title">
+          <p class="eyebrow">CHAPTER 02</p>
+          <h2 class="chapter-heading" id="publish-title">ランディングページを公開する</h2>
+          <p class="chapter-intro">LPを無料で公開する方法には、GitHub PagesやNetlifyなど、いくつかの選択肢があります。今回は、Netlifyでデプロイして公開する方法を紹介します。</p>
+          <div class="service-gallery">
+            <figure class="media">
+              <a class="media-link" href="assets/images/Netlify.png" aria-label="Netlifyのホームページを拡大表示"><img src="assets/images/Netlify.png" alt="Netlifyのホームページ" width="1920" height="1092" loading="lazy" decoding="async"></a>
+              <figcaption><span class="media-type">IMAGE</span> Netlifyのホームページ</figcaption>
+            </figure>
+            <figure class="media">
+              <a class="media-link" href="assets/images/GithubPages.png" aria-label="GitHub Pagesのドキュメントを拡大表示"><img src="assets/images/GithubPages.png" alt="GitHub Pagesのドキュメント" width="1920" height="1092" loading="lazy" decoding="async"></a>
+              <figcaption><span class="media-type">IMAGE</span> GitHub Pagesのドキュメント</figcaption>
+            </figure>
+          </div>
+          <section class="step" id="publish-1" aria-labelledby="publish-1-title">
+            <div class="step-heading"><span class="step-number" aria-hidden="true">1</span><h3 id="publish-1-title">作成したLPをGitHubにアップロードする</h3></div>
+            <p>GitHubにログインして、左上にある緑色の「New」ボタンを押しましょう。</p>
+            <figure class="media">
+              <a class="media-link" href="assets/images/GithubHomePage.png" aria-label="GitHubの左上にあるNewボタンを拡大表示"><img src="assets/images/GithubHomePage.png" alt="GitHubの左上にあるNewボタン" width="1920" height="303" loading="lazy" decoding="async"></a>
+              <figcaption><span class="media-type">IMAGE</span> GitHubで新しいリポジトリを作成する画面</figcaption>
+            </figure>
+            <p>リポジトリには好きな名前を付けてください。公開範囲は「Private（非公開）」でもOKです。</p>
+            <figure class="media">
+              <video controls playsinline preload="none" width="3024" height="1720" poster="assets/posters/CreatingNewRepository.png" aria-label="GitHubでリポジトリを作るの操作動画" aria-describedby="caption-CreatingNewRepository">
+                <source src="assets/videos/CreatingNewRepository.mp4" type="video/mp4">
+                <p>動画を再生できない場合は、<a href="assets/videos/CreatingNewRepository.mp4">MP4を開いてください</a>。</p>
+              </video>
+              <figcaption id="caption-CreatingNewRepository"><span class="media-type">VIDEO</span> GitHubでリポジトリを作る（音声なし）<a class="media-download" href="assets/videos/CreatingNewRepository.mp4">動画を開く ↗</a></figcaption>
+            </figure>
+            <p>次に、Codexに作ってもらったファイルをGitHubにアップロードします。以下の3つのファイルが生成されているはずです。</p>
+            <div class="file-list" aria-label="アップロードするファイル"><code>index.html</code><code>script.js</code><code>style.css</code></div>
+            <p>ファイルの場所がわからないときは、Codexに聞いてみてください。画像などを使っている場合は、その素材もフォルダ構成を保ってアップロードします。</p>
+            <ol class="instructions">
+              <li>「upload an existing file（既存のファイルをアップロード）」を押します。</li>
+              <li>「choose your files」を押して、Codexに作ってもらったファイルを選択し、アップロードします。</li>
+              <li>最後に「Commit changes」ボタンを押してコミットします。</li>
+            </ol>
+            <figure class="media">
+              <video controls playsinline preload="none" width="3024" height="1720" poster="assets/posters/CommitToGithub.png" aria-label="ファイルをアップロードしてコミットするの操作動画" aria-describedby="caption-CommitToGithub">
+                <source src="assets/videos/CommitToGithub.mp4" type="video/mp4">
+                <p>動画を再生できない場合は、<a href="assets/videos/CommitToGithub.mp4">MP4を開いてください</a>。</p>
+              </video>
+              <figcaption id="caption-CommitToGithub"><span class="media-type">VIDEO</span> ファイルをアップロードしてコミットする（音声なし）<a class="media-download" href="assets/videos/CommitToGithub.mp4">動画を開く ↗</a></figcaption>
+            </figure>
+          </section>
+          <section class="step" id="publish-2" aria-labelledby="publish-2-title">
+            <div class="step-heading"><span class="step-number" aria-hidden="true">2</span><h3 id="publish-2-title">Netlifyにサインインする</h3></div>
+            <p>GitHubアカウントを使って、Netlifyにサインインしましょう。右上の「Sign Up」ボタンを押してから、「Sign Up With GitHub」を選びます。</p>
+            <figure class="media">
+              <video controls playsinline preload="none" width="3024" height="1720" poster="assets/posters/NetlifyExample.png" aria-label="GitHubアカウントでNetlifyにサインインするの操作動画" aria-describedby="caption-NetlifyExample">
+                <source src="assets/videos/NetlifyExample.mp4" type="video/mp4">
+                <p>動画を再生できない場合は、<a href="assets/videos/NetlifyExample.mp4">MP4を開いてください</a>。</p>
+              </video>
+              <figcaption id="caption-NetlifyExample"><span class="media-type">VIDEO</span> GitHubアカウントでNetlifyにサインインする（音声なし）<a class="media-download" href="assets/videos/NetlifyExample.mp4">動画を開く ↗</a></figcaption>
+            </figure>
+            <aside class="note"><strong>初めてアカウントを作る場合</strong>動画では作成済みのアカウントでログインしています。初めてアカウントを作成する場合は、追加の手続きが必要になることがあります。画面の案内に沿って進めてください。</aside>
+          </section>
+          <section class="step" id="publish-3" aria-labelledby="publish-3-title">
+            <div class="step-heading"><span class="step-number" aria-hidden="true">3</span><h3 id="publish-3-title">新しいプロジェクトを追加する</h3></div>
+            <p>右上の「Add new Project」ボタンを押しましょう。次に、「Import a Git repository」の選択肢の先頭にある「GitHub」を選びます。</p>
+            <figure class="media">
+              <video controls playsinline preload="none" width="3024" height="1720" poster="assets/posters/CreatingProject.png" aria-label="Netlifyにプロジェクトを追加するの操作動画" aria-describedby="caption-CreatingProject">
+                <source src="assets/videos/CreatingProject.mp4" type="video/mp4">
+                <p>動画を再生できない場合は、<a href="assets/videos/CreatingProject.mp4">MP4を開いてください</a>。</p>
+              </video>
+              <figcaption id="caption-CreatingProject"><span class="media-type">VIDEO</span> Netlifyにプロジェクトを追加する（音声なし）<a class="media-download" href="assets/videos/CreatingProject.mp4">動画を開く ↗</a></figcaption>
+            </figure>
+          </section>
+          <section class="step" id="publish-4" aria-labelledby="publish-4-title">
+            <div class="step-heading"><span class="step-number" aria-hidden="true">4</span><h3 id="publish-4-title">デプロイして、公開したLPを確認する</h3></div>
+            <ol class="instructions">
+              <li>ステップ1で作成したリポジトリを探して選びます。</li>
+              <li>「Project name（プロジェクト名）」に、自分のアプリの名前を入力します。</li>
+              <li>一番下にあるデプロイボタンを押します。動画では「Deploy presmith」と表示されています。</li>
+            </ol>
+            <figure class="media">
+              <video controls playsinline preload="none" width="3024" height="1720" poster="assets/posters/Deploying.png" aria-label="リポジトリを選んでデプロイするの操作動画" aria-describedby="caption-Deploying">
+                <source src="assets/videos/Deploying.mp4" type="video/mp4">
+                <p>動画を再生できない場合は、<a href="assets/videos/Deploying.mp4">MP4を開いてください</a>。</p>
+              </video>
+              <figcaption id="caption-Deploying"><span class="media-type">VIDEO</span> リポジトリを選んでデプロイする（音声なし）<a class="media-download" href="assets/videos/Deploying.mp4">動画を開く ↗</a></figcaption>
+            </figure>
+            <figure class="media">
+              <a class="media-link" href="assets/images/DeployDashboard.png" aria-label="Netlifyのデプロイ完了画面と公開URLを拡大表示"><img src="assets/images/DeployDashboard.png" alt="Netlifyのデプロイ完了画面と公開URL" width="1920" height="1092" loading="lazy" decoding="async"></a>
+              <figcaption><span class="media-type">IMAGE</span> Netlifyのデプロイ完了画面</figcaption>
+            </figure>
+            <p>画像のように緑色で表示されたら、デプロイ完了です。</p>
+            <figure class="media">
+              <video controls playsinline preload="none" width="3024" height="1720" poster="assets/posters/FinalShot.png" aria-label="公開したLPを開くの操作動画" aria-describedby="caption-FinalShot">
+                <source src="assets/videos/FinalShot.mp4" type="video/mp4">
+                <p>動画を再生できない場合は、<a href="assets/videos/FinalShot.mp4">MP4を開いてください</a>。</p>
+              </video>
+              <figcaption id="caption-FinalShot"><span class="media-type">VIDEO</span> 公開したLPを開く（音声なし）<a class="media-download" href="assets/videos/FinalShot.mp4">動画を開く ↗</a></figcaption>
+            </figure>
+            <div class="completion"><strong>あなたのLPが公開されました！</strong><p>緑色の <code>&lt;設定した名前&gt;.netlify.app</code> のリンクを押すと、公開したWebサイトを開けます。</p></div>
+          </section>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><p>LP GUIDE · ランディングページの作り方と公開方法</p><a href="#top">ページの先頭へ ↑</a></div></footer>
+</body>
+</html>
