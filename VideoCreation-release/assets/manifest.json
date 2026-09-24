@@ -1,0 +1,116 @@
+{
+  "source_directory": "Assets/Redacted",
+  "template": "LightningPage-release.zip",
+  "videos": [
+    {
+      "file": "assets/videos/AskChatGPT.mp4",
+      "source": "Assets/Redacted/AskChatGPT.mp4",
+      "sha256": "d2327661102e23fa1212b69a25468293094e7606418a37620801448421d325b2",
+      "bytes": 7835440,
+      "duration_seconds": 29.333333,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 3024,
+          "height": 1900,
+          "r_frame_rate": "30/1",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "poster": "assets/posters/AskChatGPT.jpg",
+      "poster_source_seconds": 5,
+      "poster_sha256": "bce6ee4935463d5fe2e9be327861914cc18a48f12852d51a41f50522b06f1eb9"
+    },
+    {
+      "file": "assets/videos/MoveCodebase.mp4",
+      "source": "Assets/Redacted/MoveCodebase.mp4",
+      "sha256": "693c7500b91a23e96dc26b3cfbc45fd5c85efff935bf579deefa9a7625359784",
+      "bytes": 2592916,
+      "duration_seconds": 36.433333,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 3024,
+          "height": 1900,
+          "r_frame_rate": "30/1",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "poster": "assets/posters/MoveCodebase.jpg",
+      "poster_source_seconds": 16,
+      "poster_sha256": "197fe52d6debb55c42b0808aa524d5b409d08023296e1c5e6ea50d2021ca9d65"
+    },
+    {
+      "file": "assets/videos/OpenCodex.mp4",
+      "source": "Assets/Redacted/OpenCodex.mp4",
+      "sha256": "c3ea4b774e859f6a7f5491c2c339b41d41ac3fdc607c50cb56006c86ecb39e87",
+      "bytes": 1397083,
+      "duration_seconds": 21.966667,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 3024,
+          "height": 1900,
+          "r_frame_rate": "30/1",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "poster": "assets/posters/OpenCodex.jpg",
+      "poster_source_seconds": 7,
+      "poster_sha256": "11bdb4b9f35e13a7423a1ca518b9853c8cacf0b5dc9fe7fdbe7cf264e30d1b71"
+    },
+    {
+      "file": "assets/videos/init-remotion.mp4",
+      "source": "Assets/Redacted/init-remotion.mp4",
+      "sha256": "202bd28eff50afe81d02ce34593f96171de762bf737abef17c38574febf71401",
+      "bytes": 18686540,
+      "duration_seconds": 70.7,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 3024,
+          "height": 1900,
+          "r_frame_rate": "30/1",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "poster": "assets/posters/init-remotion.jpg",
+      "poster_source_seconds": 16,
+      "poster_sha256": "25d2d379369e2a9e8965116a87e0ff88c103ef91a3e1fe667135496297efddca"
+    },
+    {
+      "file": "assets/videos/remotion-tutorial.mp4",
+      "source": "Assets/Redacted/remotion-tutorial.mp4",
+      "sha256": "08414ea91e4063c25ed4909212a0da12b6bbb7d33eaa4efc07f7ca5d94a2ccb6",
+      "bytes": 11980824,
+      "duration_seconds": 70.7,
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 3024,
+          "height": 1900,
+          "r_frame_rate": "60/1",
+          "side_data_list": [
+            {}
+          ]
+        }
+      ],
+      "poster": "assets/posters/remotion-tutorial.jpg",
+      "poster_source_seconds": 2,
+      "poster_sha256": "761dfd20bf3bda370c60583326479b50c3095cc6277b75f2bca0f2783f6a98f4"
+    }
+  ]
+}
